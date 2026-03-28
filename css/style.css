@@ -1959,3 +1959,42 @@ form label {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.form-wrapper {
+    width: 100%;
+    height: 1200px; /* регулируй */
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Фиксированная ширина формы — ключевой момент */
+.form-wrapper iframe {
+    width: 760px; /* минимальная ширина Google Forms */
+    max-width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    margin: 0 auto; /* центрируем */
+}
+
+
+.form-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.form-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+}
+
+.form-wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
