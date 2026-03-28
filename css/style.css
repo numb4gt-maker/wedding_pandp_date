@@ -2147,3 +2147,18 @@ form label {
 @keyframes fadeOut {
   to { opacity: 0; visibility: hidden; }
 }
+
+.typewriter {
+  position: relative;
+  overflow: hidden;
+  animation: reveal 2.5s steps(30) forwards;
+}
+
+@keyframes reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
