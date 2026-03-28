@@ -66,8 +66,8 @@
 	<![endif]-->
 
 	</head>
-	<body>
-		<!-- <div id="intro">
+	<body class="intro-active">
+		<div id="intro">
 		<div class="wrapper auto">
 			<div class="wax-seal"><span>P&P</span></div>
 
@@ -79,7 +79,7 @@
 			<p class="nre">wedding invation</p>
 			</div>
 		</div>
-		</div> -->
+		</div>
 
 
 
@@ -259,9 +259,9 @@
 			
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<span>факты о нас</span>
-					<h2>Наша история</h2>
-					<p>Наша история зародилась еще в школе и теперь вы можете наблюдать её продолжение...</p>
+					<span>важное для гостей</span>
+					<h2>Наши пожелания</h2>
+					<p>Мы хотим, чтобы этот день был лёгким, тёплым и запоминающимся для каждого, кто будет рядом.</p>
 				</div>
 			</div>
 
@@ -272,8 +272,9 @@
 							<i class="icon-image"></i>
 						</span>
 						<div class="feature-copy">
-							<h3>ФАКТ о женихе</h3>
-							<p>Впервые мы увиделись в 2019 год</p>
+							<h3>ХОРОШЕЕ НАСТРОЕНИЕ</h3>
+							<p>Для нас самое важное — чтобы вы пришли с улыбкой. Мы очень хотим, чтобы этот день запомнился всем как тёплый и радостный.</p>
+
 						</div>
 					</div>
 
@@ -282,8 +283,8 @@
 							<i class="icon-image"></i>
 						</span>
 						<div class="feature-copy">
-							<h3>факт о невестеt</h3>
-							<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+							<h3>ВАШИ ИДЕИ</h3>
+							<p>Если у вас есть желание предложить что‑то необычное или поучаствовать в создании атмосферы — мы только за. Нам приятно, когда гости становятся частью праздника.</p>
 						</div>
 					</div>
 
@@ -292,8 +293,8 @@
 							<i class="icon-image"></i>
 						</span>
 						<div class="feature-copy">
-							<h3>факт о паре</h3>
-							<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+							<h3>ПРОСТО ХОРОШО ПРОВЕСТИ ДЕНЬ</h3>
+							<p>Мы постарались сделать всё, чтобы вам было комфортно и легко. Главное — наслаждайтесь моментом и проведите этот день так же хорошо, как и мы.</p>
 						</div>
 					</div>
 
@@ -482,6 +483,9 @@ document.querySelector("#fh5co-started form").addEventListener("submit", functio
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         document.getElementById("intro").classList.add("fade-out");
+
+		// Удаляем блокировку других анимаций
+        document.body.classList.remove("intro-active");
     }, 4200);
 });
 </script>
