@@ -9,23 +9,7 @@
 	<link rel="icon" type="image/png" href="images/wedding-ring.png">
 	<title>Приглашение P&amp;P</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
-
-  <!-- 
-	//////////////////////////////////////////////////////
-
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FREEHTML5.CO
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
-
-	//////////////////////////////////////////////////////
-	 -->
+	<meta name="description" content="Приглашение P&P" />
 
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
@@ -124,7 +108,7 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<h2>Привет!</h2>
-					<h3>Уважаемый гость</h3>
+					<h3 id="event-title">Уважаемый гость</h3>
 					<h3>Август 23-го, 2026 Минск, Беларусь</h3>
 					<p>Мы приглашем вас разделить с нами этот счастливый момент</p>
 				</div>
@@ -151,7 +135,7 @@
                     <div class="event-col">
                         <i class="icon-clock"></i>
                         <span>2:00 PM</span>
-                        <span>10:00 PM</span>
+                        <span>11:00 PM</span>
                     </div>
 
                     <div class="event-col">
@@ -412,14 +396,25 @@
 </script>
 
 <script>
-  const params = new URLSearchParams(window.location.search);
-  const name = params.get("name");
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        document.getElementById("intro").classList.add("fade-out");
+        document.body.classList.remove("intro-active");
 
-  if (name) {
-    const title = document.getElementById("event-title");
-    title.textContent = `${name}`;
-  }
+        // Теперь DOM точно готов — запускаем логику с параметрами
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get("name");
+
+        if (name) {
+            const title = document.getElementById("event-title");
+            if (title) title.textContent = name;
+        }
+
+    }, 4200);
+});
 </script>
+
+
 
 <script>
 document.querySelector("#fh5co-started form").addEventListener("submit", function(e) {
