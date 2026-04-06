@@ -110,7 +110,7 @@
 					<h2>Привет!</h2>
 					<h3 id="event-title">Уважаемый гость</h3>
 					<h3>Август 23-го, 2026 Минск, Беларусь</h3>
-					<p>Мы приглашем вас разделить с нами этот счастливый момент</p>
+					<p>Мы приглашем разделить с нами этот счастливый момент</p>
 				</div>
 			</div>
 		</div>
@@ -403,9 +403,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Теперь DOM точно готов — запускаем логику с параметрами
         const params = new URLSearchParams(window.location.search);
-        const name = params.get("name");
+        let name = params.get("name");
 
         if (name) {
+            // Декодируем вручную — важно для Telegram WebView
+            name = decodeURIComponent(name);
+
             const title = document.getElementById("event-title");
             if (title) title.textContent = name;
         }
@@ -413,6 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 4200);
 });
 </script>
+
 
 
 
