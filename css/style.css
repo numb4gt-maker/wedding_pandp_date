@@ -2169,3 +2169,40 @@ body.intro-active .typewriter {
     clip-path: inset(0 0 0 0);
   }
 }
+
+/* Фиксированный блок + отступ снизу */
+.dresscode-wrapper {
+    max-width: 600px;
+    margin: 0 auto 50px auto; /* 50px снизу */
+    padding: 10px; /* отступы внутри */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Фото внутри блока */
+.dresscode-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Стрелки — делаем видимыми */
+.carousel-control.left,
+.carousel-control.right {
+    background: none !important; /* убираем затемнение */
+    width: 8%; /* делаем стрелки компактными */
+}
+
+.carousel-control .glyphicon {
+    color: #333; /* цвет стрелок — можно поменять */
+    font-size: 30px;
+    text-shadow: none;
+}
+
+/* Точки */
+.carousel-indicators li {
+    background-color: #ccc;
+}
+
+.carousel-indicators .active {
+    background-color: #555;
+}
